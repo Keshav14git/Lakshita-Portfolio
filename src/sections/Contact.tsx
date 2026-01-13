@@ -11,20 +11,24 @@ const Contact = () => {
             </p>
 
             <div className="bg-secondary p-8 rounded shadow-lg mb-8 text-left">
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form
+                    className="space-y-4"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST"
+                >
                     <div>
                         <label htmlFor="name" className="block text-textPrimary mb-2 text-sm">Name</label>
-                        <input type="text" id="name" className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="Your Name" />
+                        <input type="text" id="name" name="name" className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="Your Name" required />
                     </div>
                     <div>
                         <label htmlFor="email" className="block text-textPrimary mb-2 text-sm">Email</label>
-                        <input type="email" id="email" className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="your@email.com" />
+                        <input type="email" id="email" name="email" className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="your@email.com" required />
                     </div>
                     <div>
                         <label htmlFor="message" className="block text-textPrimary mb-2 text-sm">Message</label>
-                        <textarea id="message" rows={4} className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="Hello..."></textarea>
+                        <textarea id="message" name="message" rows={4} className="w-full bg-primary border border-textSecondary/20 rounded p-3 text-textPrimary focus:border-accent outline-none transition-colors" placeholder="Hello..." required></textarea>
                     </div>
-                    <button className="w-full border border-accent text-accent py-3 rounded hover:bg-accent/10 transition-colors duration-300 font-mono">
+                    <button type="submit" className="w-full border border-accent text-accent py-3 rounded hover:bg-accent/10 transition-colors duration-300 font-mono">
                         Send Message
                     </button>
                 </form>

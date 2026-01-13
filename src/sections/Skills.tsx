@@ -48,19 +48,25 @@ const Skills = () => {
 
             <div className="grid gap-8">
                 {skillCategories.map((category, idx) => (
-                    <div key={idx}>
+                    <div key={idx} className="mb-8">
                         <h3 className="text-xl font-bold text-textPrimary mb-1">{category.title}</h3>
                         <p className="text-textSecondary text-sm mb-4 italic">{category.description}</p>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                             {category.skills.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className="bg-secondary p-4 rounded shadow hover:-translate-y-1 transition-transform duration-300 flex items-center gap-3"
-                                >
-                                    <div className="text-2xl text-accent">
-                                        {skill.icon}
+                                <div key={skill.name} className="bg-secondary/50 p-4 rounded hover:bg-secondary transition-colors duration-300">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div className="text-2xl text-accent">
+                                            {skill.icon}
+                                        </div>
+                                        <span className="text-textPrimary font-medium">{skill.name}</span>
                                     </div>
-                                    <span className="text-textPrimary font-medium text-sm">{skill.name}</span>
+                                    <div className="w-full bg-primary h-2 rounded-full overflow-hidden">
+                                        <div
+                                            className="bg-accent h-full rounded-full"
+                                            style={{ width: '85%' }} // Placeholder width, could be dynamic
+                                        ></div>
+                                    </div>
                                 </div>
                             ))}
                         </div>

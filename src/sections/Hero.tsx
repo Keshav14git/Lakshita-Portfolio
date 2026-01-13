@@ -66,6 +66,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
+                className="flex gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -75,6 +76,14 @@ const Hero = () => {
                     className="inline-block border border-accent text-accent px-8 py-4 rounded hover:bg-accent/10 transition-colors duration-300 font-mono"
                 >
                     Explore My Work
+                </a>
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-accent text-primary px-8 py-4 rounded hover:bg-accent/80 transition-colors duration-300 font-mono font-bold"
+                >
+                    Resume
                 </a>
             </motion.div>
         </section>

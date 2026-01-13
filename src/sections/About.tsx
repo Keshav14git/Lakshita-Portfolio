@@ -12,7 +12,7 @@ const About = () => {
 
                     <div className="text-textSecondary space-y-4 text-lg">
                         <p>
-                            I am a passionate Full Stack Developer currently pursuing my B.Tech in Computer Science and Engineering.
+                            I am a dedicated Full Stack Developer pursuing my B.Tech in Computer Science and Engineering at JECRC University. My passion lies in building scalable, dynamic web applications using the MERN stack. With a strong foundation in Data Structures and Algorithms, I approach every challenge with a problem-solving mindset, eager to engineer efficient solutions and create impactful digital experiences.
                         </p>
 
                         <div className="mt-6">
@@ -39,11 +39,15 @@ const About = () => {
                     <div className="relative group">
                         <div className="absolute inset-0 border-2 border-accent rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                         <div className="relative bg-accent/20 rounded overflow-hidden w-64 h-64 md:w-72 md:h-72">
-                            {/* Placeholder for profile image */}
-                            <div className="w-full h-full bg-secondary flex items-center justify-center text-textSecondary text-center p-4">
-                                <span className="font-mono text-sm">Add your photo here</span>
-                            </div>
-                            <div className="absolute inset-0 bg-accent/20 hover:bg-transparent transition-colors duration-300"></div>
+                            <img
+                                src="https://i.ibb.co/jP03mPnR/pt.jpg"
+                                alt="Lakshita Ashwani Profile Photo"
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 mix-blend-multiply hover:mix-blend-normal"
+                                onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.src = 'https://placehold.co/400x400/112240/64ffda?text=Lakshita';
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
