@@ -53,8 +53,9 @@ const Contact: React.FC = () => {
                     {
                         from_name: formData.name,
                         from_email: formData.email,
-                        message: formData.message,
+                        message: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
                         to_name: "Lakshita",
+                        reply_to: formData.email,
                     },
                     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                 );
